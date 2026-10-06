@@ -1,0 +1,639 @@
+{
+  "updated": "2026-10-06",
+  "person": {
+    "name": "Vu Tran",
+    "title": "AI Systems Designer",
+    "location": "Orange County, CA",
+    "email": "vu@vtdigitaloperator.com",
+    "phone": "949.212.6489",
+    "linkedin": "linkedin.com/in/vutran-digital-creative",
+    "site": "vtdigitaloperator.com",
+    "headline": "What I can build with AI, and the evidence for each.",
+    "intro": "I design the system, direct AI to build it, and check it before I call it done. The limit on what ships is how well the problem is understood, not how fast anyone types. This page is a running record. It grows every time I ship something or write down a new way of working.",
+    "skillsAuthored": 43,
+    "skillsSince": "2026-07-29"
+  },
+  "levels": [
+    {
+      "id": "spec",
+      "label": "Spec",
+      "desc": "Designed and written down. Not built yet."
+    },
+    {
+      "id": "built",
+      "label": "Built",
+      "desc": "Works, demonstrated end to end."
+    },
+    {
+      "id": "running",
+      "label": "Running",
+      "desc": "Live and in regular use."
+    },
+    {
+      "id": "others",
+      "label": "In others' hands",
+      "desc": "Used by someone besides me."
+    },
+    {
+      "id": "paid",
+      "label": "Paid",
+      "desc": "Delivered for a client or employer."
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "agents",
+      "name": "Agent systems and automation",
+      "claim": "Scheduled agents and tool chains that run without me starting them, with a checkpoint before anything leaves the system.",
+      "rule": "Reported success is not verified success. Every write gets a unique filename and a checksum match before it counts as done.",
+      "origin": "A file transfer reported success twice while writing stale bytes. One of those shipped a 53-cue transcript in place of the 145-cue one.",
+      "skills": [
+        "hermes-ops",
+        "buffer-posting",
+        "quick-panel",
+        "revision-self-check"
+      ]
+    },
+    {
+      "id": "voice",
+      "name": "Voice and conversational AI",
+      "claim": "Phone-callable agents that capture a lead mid-call and route it to the owner with nobody touching anything.",
+      "rule": "To guarantee a field gets collected, put it in the tool-call trigger, not in the list of things to ask.",
+      "origin": "On the first live call the agent skipped the caller's city to keep the call short. Optional fields get dropped.",
+      "skills": [
+        "voice-clone-session"
+      ]
+    },
+    {
+      "id": "web",
+      "name": "Web apps and internal tools",
+      "claim": "Working apps with real data behind them, from a 22,000-song music library to review consoles that hand their output to an agent.",
+      "rule": "Before saying \"fixed,\" check what the change broke. Forward and reverse, a range of sizes, and the deployed build, not the local file.",
+      "origin": "A text replacement matched nothing and reported success. A correct CSS rule got overridden further down the file. A layout checked at one screen height broke at every other.",
+      "skills": [
+        "revision-self-check",
+        "web-perf",
+        "client-pitch-site",
+        "typographic-polish",
+        "vtdo-design-system"
+      ]
+    },
+    {
+      "id": "ios",
+      "name": "iOS apps",
+      "claim": "Native iPhone apps built by directing AI, with my own Apple Developer account in place to ship them.",
+      "rule": "On-device AI writes the report. It never sets a price. Prices come from the client's own rate table.",
+      "origin": "A design rule from the FieldNote spec: a model that invents a number on a customer invoice is a liability, not a feature.",
+      "skills": []
+    },
+    {
+      "id": "video",
+      "name": "AI video and presenters",
+      "claim": "A synthetic presenter pipeline driven through the HeyGen API, with measured settings and quality gates that run before I see anything.",
+      "rule": "Nothing is timed against an estimate. Every cut snaps to a real transcript cue within 0.30 seconds.",
+      "origin": "Graphics timed to a modeled transcript landed 0.6 to 3.0 seconds off, and a render got rejected for it.",
+      "skills": [
+        "video-pipeline-ops",
+        "video-edit-process",
+        "vtdo-avatar-format",
+        "motion-graphics-craft",
+        "motion-graphics-gen",
+        "mystery-doc-script"
+      ]
+    },
+    {
+      "id": "generative",
+      "name": "Image generation and content",
+      "claim": "Campaign-scale image work run from a reusable spec, plus content pipelines that publish through Buffer.",
+      "rule": "Lock art direction in a reusable spec and vary only the subject. For a recurring face, keep only the features that hold across every reference shot.",
+      "origin": "One-off prompts drift by image forty. An averaged feature is one no reference photo supports, so the model renders it differently every time.",
+      "skills": [
+        "image-casting",
+        "asset-sourcing",
+        "cbo40-social",
+        "mina-brand",
+        "mina-pin-kit",
+        "mina-launch-package"
+      ]
+    },
+    {
+      "id": "search",
+      "name": "SEO and market research",
+      "claim": "Prospect diagnostics built on DataForSEO and public sources, with free screens that run before a cent is spent.",
+      "rule": "One source is not a check. When sources disagree, that disagreement is the finding.",
+      "origin": "I once cleared 18 leads as \"no website\" from a single API field. Six of them had live sites.",
+      "skills": [
+        "leak-finder",
+        "ad-gap-mining",
+        "niche-hunt",
+        "niche-list-mining",
+        "comp-autopsy",
+        "idea-autopsy",
+        "job-sweep"
+      ]
+    },
+    {
+      "id": "funnels",
+      "name": "Funnels and marketing automation",
+      "claim": "Opt-in funnels, nurture sequences and lead flows that run on their own once a visitor raises a hand.",
+      "rule": "Confirm there's a person and an address to reach before writing a word of outreach.",
+      "origin": "I wrote five outreach emails, then found there were no email addresses to send them to.",
+      "skills": [
+        "value-first-funnel",
+        "beacons-email-funnel",
+        "build-first",
+        "offer-framing",
+        "client-reporting",
+        "buffer-pinterest-media"
+      ]
+    },
+    {
+      "id": "enablement",
+      "name": "Skills, specs and AI enablement",
+      "claim": "Every working method gets written down as a skill someone else can run, versioned in git, with the numbers that justify it.",
+      "rule": "Taste gets changed. Craft becomes a rule and a check, so it can't happen twice.",
+      "origin": "A line-height that clipped letter descenders shipped three times. Now a layout gate fails the build before it can ship again.",
+      "skills": [
+        "blackbook",
+        "prove-first",
+        "revision-self-check",
+        "vtdo-glossary",
+        "vtdo-estimate",
+        "brand-clearance"
+      ]
+    }
+  ],
+  "builds": [
+    {
+      "name": "Phone-callable AI receptionist",
+      "capability": "voice",
+      "level": "running",
+      "date": "2026-09",
+      "summary": "Call a real Orange County number and an agent in my cloned voice runs the intake: problem, city, urgency, callback window. Mid-call it fires a tool that posts to a Make scenario, which writes a row to the owner's log and pings the owner's phone.",
+      "proof": [
+        "Live call tested end to end, Sept 5",
+        "ElevenLabs + Twilio + Make + Google Sheets + Telegram",
+        "9-field lead log, filled with nobody touching it"
+      ],
+      "stack": [
+        "ElevenLabs",
+        "Twilio",
+        "Make",
+        "Google Sheets",
+        "Telegram"
+      ]
+    },
+    {
+      "name": "Hermes agent stack",
+      "capability": "agents",
+      "level": "running",
+      "date": "2026-08",
+      "summary": "An agent stack on OpenRouter that runs recurring research, content and reporting jobs on a schedule. Every job has bounded steps and a human checkpoint before anything leaves the system.",
+      "proof": [
+        "Full stack live in about two hours, Aug 21",
+        "Daily 7am job deployed and verified",
+        "Skill library under git version control"
+      ],
+      "stack": [
+        "OpenRouter",
+        "MCP",
+        "git"
+      ]
+    },
+    {
+      "name": "Agent toolbelt",
+      "capability": "agents",
+      "level": "running",
+      "date": "2026-09",
+      "summary": "The services my agents can call directly over MCP and API, so generation, publishing, research and email run as steps in a job instead of tabs in a browser.",
+      "proof": [
+        "HeyGen API wired in, about 90 tools",
+        "Magnific, DataForSEO, Apify, Buffer, Kit, Make, Notion, Gmail and Calendar connected",
+        "Custom MCP setups for tools with no marketplace listing"
+      ],
+      "stack": [
+        "MCP",
+        "HeyGen",
+        "Magnific",
+        "DataForSEO",
+        "Apify"
+      ]
+    },
+    {
+      "name": "OC Referral Radar",
+      "capability": "agents",
+      "level": "running",
+      "date": "2026-10",
+      "summary": "Twice a day it reads public local community groups and 11 Orange County subreddits for \"who do you recommend?\" posts, matches each to a member of my referral group, checks the thread so nobody gets referred twice, and drafts the reply for me to post.",
+      "proof": [
+        "885 posts read in the first four days",
+        "8 matches, 5 replies posted, 1 duplicate caught",
+        "$5.92 in scraping cost against a $19 cap"
+      ],
+      "stack": [
+        "Apify",
+        "Claude",
+        "Artifact database"
+      ]
+    },
+    {
+      "name": "VTDO Jams, a private cloud music library",
+      "capability": "web",
+      "level": "running",
+      "date": "2026-10",
+      "summary": "Brought a 10-year-old iTunes library back to life as a private web player with search, BPM filtering, playlists, lock-screen controls, duplicate checks and daily backups. The migration ran read-only with stop-and-approve gates.",
+      "proof": [
+        "22,649 songs loaded from a 148.6 GB audit",
+        "82 automated tests and 29 browser checks passing",
+        "Independent code review found 15 issues, all fixed"
+      ],
+      "stack": [
+        "Next.js",
+        "Postgres"
+      ]
+    },
+    {
+      "name": "Cut Notes",
+      "capability": "web",
+      "level": "running",
+      "date": "2026-09",
+      "summary": "A video review console. I watch a proxy and press M wherever something needs to change; it captures a frame-accurate timecode, tags and a note, and the editing agent works the cut from that list.",
+      "proof": [
+        "28 notes across two parts of the first episode",
+        "Keyboard-driven, single-frame stepping",
+        "A \"part done\" signal so the agent never reads a half-written pass"
+      ],
+      "stack": [
+        "Artifact database"
+      ]
+    },
+    {
+      "name": "Faceless Avatar Operator",
+      "capability": "generative",
+      "level": "built",
+      "date": "2026-09",
+      "summary": "A prompt console that holds a locked identity block for each synthetic presenter and writes it in the dialect each of 20 image and video models expects. Claude vision reads the reference shots and repairs prompts that miss.",
+      "proof": [
+        "20 models across Photoshop, Magnific, Higgsfield, Gemini, ChatGPT and HeyGen",
+        "3 recurring presenters",
+        "Identity derived from 5 to 8 reference shots"
+      ],
+      "stack": [
+        "Claude vision",
+        "Artifact database"
+      ]
+    },
+    {
+      "name": "Two production sites in 48 hours",
+      "capability": "web",
+      "level": "built",
+      "date": "2026-08",
+      "summary": "Research, copy, design, build and launch on two different stacks inside two days.",
+      "proof": [
+        "WordPress with Elementor",
+        "Vercel-hosted build"
+      ],
+      "stack": [
+        "WordPress",
+        "Elementor",
+        "Vercel"
+      ]
+    },
+    {
+      "name": "Demo Foundry",
+      "capability": "web",
+      "level": "built",
+      "date": "",
+      "summary": "A platform for per-prospect demo builds with expiring share links, a Draft to QA Ready to Active to Expired status workflow, and view tracking so I know a prospect opened it before I follow up.",
+      "proof": [
+        "Status workflow designed before any page was built"
+      ],
+      "stack": []
+    },
+    {
+      "name": "OR Timer",
+      "capability": "ios",
+      "level": "built",
+      "date": "2026-09",
+      "summary": "My first fully functioning iPhone app.",
+      "proof": [
+        "Apple Developer enrollment complete"
+      ],
+      "stack": [
+        "Swift",
+        "Xcode"
+      ]
+    },
+    {
+      "name": "Workout tracker",
+      "capability": "ios",
+      "level": "built",
+      "date": "2026-10",
+      "summary": "A fitness tracking app for iPhone, built over a weekend.",
+      "proof": [
+        "Built Oct 3 to 4"
+      ],
+      "stack": [
+        "Swift"
+      ]
+    },
+    {
+      "name": "FieldNote",
+      "capability": "ios",
+      "level": "spec",
+      "date": "2026-09",
+      "summary": "An offline iPhone app for field technicians: talk through the job and Apple's on-device model returns a typed job report, priced from the client's own rate table. Includes Swift samples, a phased build plan and an airplane-mode demo script.",
+      "proof": [
+        "Full build spec written"
+      ],
+      "stack": [
+        "Apple Foundation Models",
+        "Swift"
+      ]
+    },
+    {
+      "name": "AI presenter pipeline",
+      "capability": "video",
+      "level": "running",
+      "date": "2026-09",
+      "summary": "Long-form episodes presented by a synthetic version of me, rendered through the HeyGen API with my cloned ElevenLabs voice. The render settings were chosen by controlled A/B tests, not by eye.",
+      "proof": [
+        "First episode rendered: 8 min 21 s, split on beat boundaries",
+        "Measured: 3.2x realtime render, about 16 credits a minute",
+        "Breath noise gated at -39 dB, sibilance fixed with a de-esser instead of a denoiser"
+      ],
+      "stack": [
+        "HeyGen API",
+        "ElevenLabs",
+        "Final Cut Pro"
+      ]
+    },
+    {
+      "name": "Video QC gates",
+      "capability": "video",
+      "level": "running",
+      "date": "2026-09",
+      "summary": "Two scripted gates check every graphic before render and every rendered file after, then two reviewer agents judge motion and edit. Failures get fixed and re-run before anything reaches me.",
+      "proof": [
+        "Layout gate: clipping, overflow, safe area, palette",
+        "Render gate: empty, static, hold, frame rate, duration, duplicates",
+        "33 of 33 cuts snapped to real transcript cues"
+      ],
+      "stack": [
+        "Python",
+        "Whisper large-v3",
+        "FCPXML"
+      ]
+    },
+    {
+      "name": "AI-generated video slideshow",
+      "capability": "video",
+      "level": "built",
+      "date": "2026-10",
+      "summary": "A video slideshow with every element generated by AI.",
+      "proof": [
+        "Built Oct 3 to 4"
+      ],
+      "stack": []
+    },
+    {
+      "name": "Generative image practice",
+      "capability": "generative",
+      "level": "running",
+      "date": "2026-09",
+      "summary": "Campaign work runs off a reusable prompt spec that locks lens, light, palette and a reserved text zone, and varies only the subject. The image platform is wired into the agent stack, so a batch runs with identical art direction every time.",
+      "proof": [
+        "1,395 assets produced",
+        "1,051 generations, 262 edits, 57 video pieces",
+        "Driven programmatically over MCP"
+      ],
+      "stack": [
+        "Magnific",
+        "Higgsfield",
+        "HeyGen"
+      ]
+    },
+    {
+      "name": "Social content pipelines",
+      "capability": "generative",
+      "level": "running",
+      "date": "2026-08",
+      "summary": "Content for two brands drafted, rendered and queued to Pinterest through Buffer, with a scripted pin builder doing the layout.",
+      "proof": [
+        "Python pin builder with a Node renderer",
+        "Posts staged through the Buffer API"
+      ],
+      "stack": [
+        "Buffer",
+        "Python",
+        "Node"
+      ]
+    },
+    {
+      "name": "Leak Finder",
+      "capability": "search",
+      "level": "running",
+      "date": "2026-08",
+      "summary": "Finds a specific, fixable, dollar-valued problem in a business from public evidence: the ad library, reviews, missed inquiries and site health. Three free screens run before any paid data pull.",
+      "proof": [
+        "Measured funnel: 30 screened, 12 qualified, 10 live, about 5 worth a paid pull",
+        "Three-source gate on every local prospect",
+        "Every platform-computed number recomputed from raw records"
+      ],
+      "stack": [
+        "DataForSEO",
+        "Meta Ad Library",
+        "Trustpilot",
+        "Google Maps"
+      ]
+    },
+    {
+      "name": "Local ranking grid audit",
+      "capability": "search",
+      "level": "built",
+      "date": "2026-10",
+      "summary": "A Maps ranking grid for a local contractor: 9 cities by 3 searches, plus a broken main domain, a missing business category and stale reviews, all found from public data.",
+      "proof": [
+        "27 ranking checks, 21 outside the top 20"
+      ],
+      "stack": [
+        "DataForSEO"
+      ]
+    },
+    {
+      "name": "AI presenter funnel",
+      "capability": "funnels",
+      "level": "running",
+      "date": "2026-09",
+      "summary": "A lead-magnet opt-in on my own subdomain with double opt-in, download on confirm, and a five-email nurture sequence behind it.",
+      "proof": [
+        "Live Sept 9",
+        "14-page guide as the magnet",
+        "Tag-triggered sequence in Kit"
+      ],
+      "stack": [
+        "Kit"
+      ]
+    },
+    {
+      "name": "Missed-call SMS flow",
+      "capability": "funnels",
+      "level": "built",
+      "date": "",
+      "summary": "When a call goes unanswered, the system texts back, qualifies the caller, writes the answers into fields, assigns a named owner and escalates against a callback deadline.",
+      "proof": [
+        "Registered business texting line, brand and campaign approved"
+      ],
+      "stack": [
+        "Quo",
+        "A2P 10DLC"
+      ]
+    },
+    {
+      "name": "Conversational lead schema",
+      "capability": "enablement",
+      "level": "spec",
+      "date": "2026-08",
+      "summary": "A field schema, write rules and tag system for an Instagram DM lead-capture system, written for a prospect from their public job post. It separates AI-extracted values from confirmed ones so the team keeps trusting the data.",
+      "proof": [
+        "27 fields, a write rule for each",
+        "4 conflicts found in the client's own field list"
+      ],
+      "stack": [],
+      "link": "https://claude.ai/artifact/UDjZaPN1gvmZXSAzy5doit"
+    },
+    {
+      "name": "Mixed-cart order routing",
+      "capability": "enablement",
+      "level": "spec",
+      "date": "2026-08",
+      "summary": "Line-item routing for a fulfillment case the obvious design breaks on, plus the system-of-record boundary that keeps the integration maintainable.",
+      "proof": [
+        "Written on spec, before any engagement"
+      ],
+      "stack": [],
+      "link": "https://claude.ai/code/artifact/c556ce65-0079-4934-8687-c0f1495ecab4"
+    },
+    {
+      "name": "The Blackbook",
+      "capability": "enablement",
+      "level": "running",
+      "date": "2026-07",
+      "summary": "My skill library. Every process I work out gets written down with its trigger, its steps, its checks and the numbers behind it, then versioned, so the next run is identical and someone else can run it without asking me.",
+      "proof": [
+        "43 skills written since July 29",
+        "Versioned in git with an index and an archive",
+        "Four shared publicly below"
+      ],
+      "stack": [
+        "Claude skills",
+        "git"
+      ]
+    }
+  ],
+  "log": [
+    {
+      "date": "2026-10-04",
+      "text": "Weekend build: a private cloud music library, a workout tracker for iPhone, a referral radar for my networking group and a fully AI-generated video slideshow."
+    },
+    {
+      "date": "2026-10-03",
+      "text": "Referral Radar's first live scans. Music library: 41-track pilot approved."
+    },
+    {
+      "date": "2026-09",
+      "text": "First fully functioning iPhone app, OR Timer."
+    },
+    {
+      "date": "2026-09-12",
+      "text": "Wrote the video QC gates after three defects slipped through. They now run before anything reaches me."
+    },
+    {
+      "date": "2026-09-10",
+      "text": "Wired the HeyGen API into my agent stack and rendered the first 8-minute avatar episode."
+    },
+    {
+      "date": "2026-09-09",
+      "text": "AI presenter funnel live: opt-in page, double opt-in and a five-email sequence."
+    },
+    {
+      "date": "2026-09-05",
+      "text": "Voice agent proven on a live call: lead captured, logged and sent to my phone automatically."
+    },
+    {
+      "date": "2026-08-28",
+      "text": "Wrote a conversational lead schema for a prospect from their public job post."
+    },
+    {
+      "date": "2026-08-22",
+      "text": "Ran Leak Finder on its first measured batch: 30 screened, 12 qualified."
+    },
+    {
+      "date": "2026-08-21",
+      "text": "Hermes agent stack live in about two hours, with a verified daily job."
+    },
+    {
+      "date": "2026-08-11",
+      "text": "Finished 11 AI credentials across Google, OpenAI and Anthropic in one week."
+    },
+    {
+      "date": "2026-08",
+      "text": "Two production sites on two stacks in 48 hours."
+    },
+    {
+      "date": "2026-07-29",
+      "text": "Started the Blackbook, my versioned skill library."
+    }
+  ],
+  "shared": [
+    {
+      "slug": "revision-self-check",
+      "name": "Revision Self-Check",
+      "what": "The check that runs after every code change: did the edit apply, what else could it break, forward and reverse, a range of sizes, the deployed build."
+    },
+    {
+      "slug": "leak-finder",
+      "name": "Leak Finder",
+      "what": "Find a specific, fixable, dollar-valued problem in a business from public evidence, with three free screens before any paid pull."
+    },
+    {
+      "slug": "video-pipeline-ops",
+      "name": "Video Pipeline Ops",
+      "what": "The operating contract for a multi-asset video build: ground truth before authoring, unattended passes, QC gates and the hard stops."
+    },
+    {
+      "slug": "blackbook",
+      "name": "Blackbook",
+      "what": "How I turn any process or hard-won lesson into a permanent, versioned skill."
+    }
+  ],
+  "history": [
+    {
+      "when": "Until 2026",
+      "what": "Senior Web Designer",
+      "detail": "A long-term in-house role."
+    },
+    {
+      "when": "2020 to 2022",
+      "what": "Team lead and front-end builder, enterprise event work",
+      "detail": "Led a small team of developers and designers delivering for Live Marketing's clients Boston Scientific, TE Connectivity, BD, Vizient and IDEXX. Designer and primary front-end builder on two event microsites, and shipped a React trade-show app with the team."
+    },
+    {
+      "when": "2015 to 2022",
+      "what": "Founder, Climb SEO",
+      "detail": "Ran my own SEO practice for seven years."
+    },
+    {
+      "when": "Before 2015",
+      "what": "Lead designer and art director, creator economy",
+      "detail": "Designed both sides of a creator-monetization platform where thousands of independent broadcasters earned a living: viewer discovery and subscriptions, and creator earnings and broadcast tools. One of the most-visited sites on the internet during my tenure."
+    },
+    {
+      "when": "Late 1990s",
+      "what": "Graphic designer, Art-O-Graph Publications",
+      "detail": "Where it started. BA in Visual Communication."
+    }
+  ],
+  "credentials": "11 AI credentials from Google, OpenAI and Anthropic, August 2026, including Claude Code in Action and Introduction to Agent Skills.",
+  "scaleNote": "Most of what's here runs for my own practice: I'm both the builder and the user. What carries over to a bigger organization is the discipline that keeps it running: bounded steps, explicit human checkpoints, a written library instead of one-offs only the author can fix, and the data model settled before the first automation touches it."
+}

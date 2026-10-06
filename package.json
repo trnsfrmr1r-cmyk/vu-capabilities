@@ -1,0 +1,10 @@
+{
+  "name": "vu-capabilities",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "og": "node scripts/og.mjs"
+  },
+  "engines": { "node": ">=20" }
+}
