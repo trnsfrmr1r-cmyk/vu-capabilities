@@ -34,12 +34,14 @@
     {
       "id": "others",
       "label": "In others' hands",
-      "desc": "Used by someone besides me."
+      "desc": "Used by someone besides me.",
+      "hidden": true
     },
     {
       "id": "paid",
       "label": "Paid",
-      "desc": "Delivered for a client or employer."
+      "desc": "Delivered for a client or employer.",
+      "hidden": true
     }
   ],
   "capabilities": [
@@ -531,9 +533,60 @@
         "Claude skills",
         "git"
       ]
+    },
+    {
+      "name": "VT Field",
+      "capability": "ios",
+      "level": "built",
+      "date": "",
+      "summary": "An iPhone app that captures a business card with the camera, reads it, and turns it into a saved contact.",
+      "proof": [],
+      "stack": [
+        "iOS"
+      ]
+    },
+    {
+      "name": "VTDO Work Release",
+      "capability": "web",
+      "level": "built",
+      "date": "2026-10",
+      "summary": "A thirty-second permission form a client signs on their phone so I can show the work we did. They opt out of anything they'd rather not include, sign with a finger, and both of us get a timestamped PDF.",
+      "proof": [
+        "Four opt-out permissions, from logo to quoted words",
+        "Finger signature with date, time and time zone",
+        "PDF generated in the browser, copy sent to the client"
+      ],
+      "stack": [
+        "jsPDF",
+        "Canvas",
+        "Vercel"
+      ],
+      "link": "https://vtdo-release.vercel.app/",
+      "linkLabel": "See it live"
+    },
+    {
+      "name": "OC PRO member directory",
+      "capability": "web",
+      "level": "built",
+      "date": "2026-10",
+      "summary": "A phone-first directory for my referral group. Search by name or service, filter by service type or board, then call, text, email, save the contact with a headshot, or send the member's card to someone who needs a referral.",
+      "proof": [
+        "33 members, built from their public bios",
+        "One-tap contact save with photo",
+        "Link previews built for texting a card"
+      ],
+      "stack": [
+        "Python",
+        "Static site",
+        "Vercel"
+      ]
     }
   ],
   "log": [
+    {
+      "date": "2026-10-05",
+      "text": "Shipped a client work release with finger signature and PDF export, and a phone-first member directory for my referral group."
+    },
     {
       "date": "2026-10-04",
       "text": "Weekend build: a private cloud music library, a workout tracker for iPhone, a referral radar for my networking group and a fully AI-generated video slideshow."
@@ -637,5 +690,72 @@
     }
   ],
   "credentials": "11 AI credentials from Google, OpenAI and Anthropic, August 2026, including Claude Code in Action and Introduction to Agent Skills.",
-  "scaleNote": "Most of what's here runs for my own practice: I'm both the builder and the user. What carries over to a bigger organization is the discipline that keeps it running: bounded steps, explicit human checkpoints, a written library instead of one-offs only the author can fix, and the data model settled before the first automation touches it."
+  "scaleNote": "Most of what's here runs for my own practice: I'm both the builder and the user. What carries over to a bigger organization is the discipline that keeps it running: bounded steps, explicit human checkpoints, a written library instead of one-offs only the author can fix, and the data model settled before the first automation touches it.",
+  "sites": [
+    {
+      "name": "VT Digital Operator",
+      "url": "https://vtdigitaloperator.com",
+      "img": "vtdo.jpg",
+      "kind": "My site",
+      "date": "2026-09",
+      "what": "My own site. It opens on what a business is losing, then walks through the teardown, the checklist and how I work."
+    },
+    {
+      "name": "Specialists Auto Glass",
+      "url": "https://specialists-auto-glass.vercel.app",
+      "img": "specialists-auto-glass.jpg",
+      "kind": "Spec build",
+      "date": "2026-09",
+      "what": "Mobile auto glass in Santa Ana. Leads with the mobile service and the shop's Google and Yelp ratings."
+    },
+    {
+      "name": "Meridian",
+      "url": "https://miami-site.vercel.app",
+      "img": "meridian.jpg",
+      "kind": "Spec build",
+      "date": "2026-09",
+      "what": "A private relocation brokerage for people moving to Miami from New York and California."
+    },
+    {
+      "name": "27 Ocean Crest",
+      "url": "https://newport-cliffside.vercel.app",
+      "img": "ocean-crest.jpg",
+      "kind": "Spec build",
+      "date": "2026-09",
+      "what": "A single-property site for a Newport Coast estate listing, told room by room."
+    },
+    {
+      "name": "Ritz Nails",
+      "url": "https://ritz-nails.vercel.app",
+      "img": "ritz-nails.jpg",
+      "kind": "Spec build",
+      "date": "2026-08",
+      "what": "A two-location Orange County nail salon, with each location's hours, rating and phone up front and the full menu priced."
+    },
+    {
+      "name": "AAA Transmission",
+      "url": "https://aaa-transmission-santa-ana.vercel.app",
+      "img": "aaa-transmission.jpg",
+      "kind": "Spec build",
+      "date": "2026-08",
+      "what": "A Santa Ana transmission and repair shop, built around its perfect 5.0 across 215 Google reviews."
+    },
+    {
+      "name": "Panic Room Builders",
+      "url": "https://panic-room-builders.vercel.app",
+      "img": "panic-room-builders.jpg",
+      "kind": "Spec build",
+      "date": "2026-08",
+      "what": "Safe rooms for estates. A quiet, high-end tone that leads to a private consultation."
+    },
+    {
+      "name": "Puppers Paradise Resort",
+      "url": "https://pprdb-site.vercel.app",
+      "img": "pprdb.jpg",
+      "kind": "Spec build",
+      "date": "2026-07",
+      "what": "Dog boarding and daycare in Riverside, structured around the services and the city people search for."
+    }
+  ],
+  "sitesIntro": "Sites I designed and shipped. One is mine. The rest were built on spec, before any engagement, to show a business what its site could be."
 }

@@ -3,7 +3,11 @@
 import { readFileSync, writeFileSync, mkdirSync, rmSync, cpSync, existsSync } from "node:fs";
 
 const data = JSON.parse(readFileSync("data/portfolio.json", "utf8"));
-const { person, levels, capabilities, builds, log, shared, history } = data;
+const { person, capabilities, builds, log, shared, history } = data;
+const sites = data.sites || [];
+// A level shows on the page only when it isn't hidden, or as soon as a build reaches it.
+const usedLevels = new Set(builds.map((b) => b.level));
+const levels = data.levels.filter((l) => !l.hidden || usedLevels.has(l.id));
 
 const SITE_URL = (process.env.SITE_URL
   || data.siteUrl
@@ -58,8 +62,7 @@ const capIndex = capabilities.map((c) => {
     <span class="ci-meta">${top ? levelChip(top.level) : ""}<span class="ci-n">${bs.length} ${bs.length === 1 ? "build" : "builds"}</span></span></a></li>`;
 }).join("");
 
-// Paid work so far lives in the history list, so it counts toward the Paid level.
-const keyCount = (id) => counts[id] + (id === "paid" ? history.length : 0);
+const keyCount = (id) => counts[id] || 0;
 const levelKey = levels.map((l) => {
   const n = keyCount(l.id);
   return `
@@ -72,7 +75,7 @@ const levelKey = levels.map((l) => {
 function buildCard(b) {
   const proof = b.proof?.length ? `<ul class="proof">${b.proof.map((p) => `<li>${esc(p)}</li>`).join("")}</ul>` : "";
   const stack = b.stack?.length ? `<p class="stack">${b.stack.map((s) => `<span>${esc(s)}</span>`).join("")}</p>` : "";
-  const link = b.link ? `<a class="more" href="${esc(b.link)}" target="_blank" rel="noopener">Read it</a>` : "";
+  const link = b.link ? `<a class="more" href="${esc(b.link)}" target="_blank" rel="noopener">${esc(b.linkLabel || "Read it")}</a>` : "";
   return `<article class="build" data-level="${b.level}">
     <header>${levelChip(b.level)}${b.date ? `<time>${esc(fmtDate(b.date))}</time>` : ""}</header>
     <h3>${esc(b.name)}</h3>
@@ -121,8 +124,17 @@ const sharedCards = shared.map((s) => `
 
 const historyList = history.map((h) => `
   <li><span class="h-when">${esc(h.when)}</span>
-    <div><h3>${esc(h.what)}</h3><p>${esc(h.detail)}</p></div>
-    <span class="h-lvl">${levelChip("paid")}</span></li>`).join("");
+    <div><h3>${esc(h.what)}</h3><p>${esc(h.detail)}</p></div></li>`).join("");
+
+const hostOf = (u) => u.replace(/^https?:\/\//, "").replace(/\/$/, "");
+const siteCards = sites.map((s) => `
+  <a class="site" href="${esc(s.url)}" target="_blank" rel="noopener">
+    <img src="/sites/${esc(s.img)}" alt="Home page of ${esc(s.name)}" width="800" height="500" loading="lazy">
+    <span class="site-meta"><span class="site-kind">${esc(s.kind)}</span>${s.date ? `<time>${esc(fmtDate(s.date))}</time>` : ""}</span>
+    <span class="site-name">${esc(s.name)}</span>
+    <span class="site-what">${esc(s.what)}</span>
+    <span class="site-url">${esc(hostOf(s.url))} ↗</span>
+  </a>`).join("");
 
 // ---------- head ----------
 const title = `${person.name} · ${person.title}`;
@@ -205,7 +217,7 @@ ${SITE_URL ? `<meta property="og:url" content="${SITE_URL}/">\n<link rel="canoni
       <p class="eyebrow">Capabilities</p>
       <ol class="cap-index">${capIndex}</ol>
       <p class="eyebrow side-gap">Also on this page</p>
-      <ul class="side-links"><li><a href="#log">Running log</a></li><li><a href="#skills">Take my skills</a></li><li><a href="#before">Before AI</a></li></ul>
+      <ul class="side-links"><li><a href="#log">Running log</a></li><li><a href="#skills">Take my skills</a></li><li><a href="#before">Before AI</a></li>${sites.length ? `<li><a href="#sites">Sites I've built</a></li>` : ""}</ul>
     </div>
   </aside>
 
@@ -238,6 +250,13 @@ ${SITE_URL ? `<meta property="og:url" content="${SITE_URL}/">\n<link rel="canoni
     <section class="block note" aria-label="Scale note">
       <p>${esc(data.scaleNote)}</p>
     </section>
+
+    ${sites.length ? `<section class="block" id="sites" aria-labelledby="sites-h">
+      <p class="eyebrow">${sites.length} sites · live</p>
+      <h2 id="sites-h">Sites I've built</h2>
+      <p class="lede">${esc(data.sitesIntro || "")}</p>
+      <div class="site-grid">${siteCards}</div>
+    </section>` : ""}
   </main>
 </div>
 
@@ -289,6 +308,9 @@ const llms = [
   "## Before AI",
   ...history.map((h) => `- ${h.when}: ${h.what}. ${h.detail}`),
   "",
+  "## Sites I've built",
+  ...sites.map((s) => `- ${s.name} (${s.kind}): ${s.url} — ${s.what}`),
+  "",
 ].join("\n");
 
 // ---------- write ----------
@@ -296,7 +318,7 @@ rmSync("dist", { recursive: true, force: true });
 mkdirSync("dist", { recursive: true });
 cpSync("public", "dist", { recursive: true });
 writeFileSync("dist/index.html", html);
-writeFileSync("dist/portfolio.json", JSON.stringify({ ...data, site: SITE_URL || null }, null, 2));
+writeFileSync("dist/portfolio.json", JSON.stringify({ ...data, levels, site: SITE_URL || null }, null, 2));
 writeFileSync("dist/llms.txt", llms);
 writeFileSync("dist/robots.txt", `User-agent: *\nAllow: /\n${SITE_URL ? `Sitemap: ${SITE_URL}/sitemap.xml\n` : ""}`);
 if (SITE_URL) writeFileSync("dist/sitemap.xml",

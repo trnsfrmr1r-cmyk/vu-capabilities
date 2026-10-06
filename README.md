@@ -13,6 +13,7 @@ Everything on the page comes from `data/portfolio.json`. To add to it:
 | Learned or proved something worth noting | Add a line to the top of `log` |
 | Wrote a new skill | Bump `person.skillsAuthored`; add it to the right capability's `skills` |
 | Sharing a new skill publicly | Put a scrubbed copy in `public/skills/<slug>.md` and add it to `shared` |
+| Add a site | Screenshot the home page at 1440×900, save an 800×500 JPEG to `public/sites/`, and add an entry to `sites` (name, url, img, kind, date, what). Kind is `My site`, `Spec build` or `Client` |
 | Bump the date | `updated` (YYYY-MM-DD) |
 
 Then preview locally with `node build.mjs` (writes `dist/`), commit and push. Vercel builds it in about a minute.
@@ -26,6 +27,8 @@ Then preview locally with `node build.mjs` (writes `dist/`), commit and push. Ve
 | `running` | Live and in regular use, with dates |
 | `others` | Used by someone other than me |
 | `paid` | Delivered for a client or employer |
+
+`others` and `paid` are marked `"hidden": true` in `levels` for now. A hidden level appears on the page automatically the first time a build reaches it, so no level ever shows a zero.
 
 ### Rules for entries
 
