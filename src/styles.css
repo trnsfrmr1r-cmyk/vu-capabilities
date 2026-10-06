@@ -120,7 +120,7 @@ main { min-width: 0; display: flex; flex-direction: column; gap: 72px; }
 
 /* evidence key */
 .keyband { border-bottom: 1px solid var(--rule); padding-block: 24px 28px; }
-.keys { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 8px; margin-top: 14px; }
+.keys { display: grid; grid-template-columns: repeat(auto-fit, minmax(148px, 1fr)); gap: 8px; margin-top: 14px; }
 .key {
   font: inherit; text-align: left; color: var(--text); cursor: pointer;
   display: flex; flex-direction: column; gap: 10px;
