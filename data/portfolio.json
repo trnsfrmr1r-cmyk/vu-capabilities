@@ -537,12 +537,17 @@
     {
       "name": "VT Field",
       "capability": "ios",
-      "level": "built",
+      "level": "running",
       "date": "",
-      "summary": "An iPhone app that captures a business card with the camera, reads it, and turns it into a saved contact.",
-      "proof": [],
+      "summary": "An iPhone app that turns a business card into a saved contact. Scan the card, say the details out loud, or type them, and it builds the contact for you.",
+      "proof": [
+        "30+ business cards processed so far",
+        "Three ways in: scan, voice and type"
+      ],
       "stack": [
-        "iOS"
+        "iOS",
+        "Camera scan",
+        "Voice input"
       ]
     },
     {
@@ -583,6 +588,10 @@
     }
   ],
   "log": [
+    {
+      "date": "2026-10-06",
+      "text": "VT Field passed 30 business cards turned into contacts, by scan, voice or typing."
+    },
     {
       "date": "2026-10-05",
       "text": "Shipped a client work release with finger signature and PDF export, and a phone-first member directory for my referral group."
