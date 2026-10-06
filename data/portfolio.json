@@ -317,10 +317,11 @@
     {
       "name": "OR Timer",
       "capability": "ios",
-      "level": "built",
+      "level": "running",
       "date": "2026-09",
-      "summary": "My first fully functioning iPhone app.",
+      "summary": "My first fully functioning iPhone app, built for operating-room timing and now in use on the job.",
       "proof": [
+        "In use in the field by an operating-room nurse",
         "Apple Developer enrollment complete"
       ],
       "stack": [
@@ -588,6 +589,10 @@
     }
   ],
   "log": [
+    {
+      "date": "2026-10-06",
+      "text": "OR Timer is in use in the field by an operating-room nurse."
+    },
     {
       "date": "2026-10-06",
       "text": "VT Field passed 30 business cards turned into contacts, by scan, voice or typing."
