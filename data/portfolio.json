@@ -332,11 +332,12 @@
     {
       "name": "Workout tracker",
       "capability": "ios",
-      "level": "built",
+      "level": "running",
       "date": "2026-10",
-      "summary": "A fitness tracking app for iPhone, built over a weekend.",
+      "summary": "A fitness tracking app for iPhone, built over a weekend and in regular use since.",
       "proof": [
-        "Built Oct 3 to 4"
+        "Built Oct 3 to 4",
+        "In regular use since"
       ],
       "stack": [
         "Swift"
