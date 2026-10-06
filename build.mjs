@@ -6,6 +6,7 @@ const data = JSON.parse(readFileSync("data/portfolio.json", "utf8"));
 const { person, levels, capabilities, builds, log, shared, history } = data;
 
 const SITE_URL = (process.env.SITE_URL
+  || data.siteUrl
   || (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : "")
 ).replace(/\/$/, "");
 
@@ -242,7 +243,8 @@ ${SITE_URL ? `<meta property="og:url" content="${SITE_URL}/">\n<link rel="canoni
 
 <footer class="foot"><div class="rail foot-in">
   <p>${esc(person.name)} · ${esc(person.title)} · ${esc(person.location)}</p>
-  <p>Built by directing AI and updated from a single data file. For agents and recruiters' tools: <a href="/portfolio.json">portfolio.json</a> · <a href="/llms.txt">llms.txt</a></p>
+  <p>Built by directing AI and updated from a single data file. Every update is a dated commit in the <a href="${esc(data.repo)}" target="_blank" rel="noopener">public repo</a>.</p>
+  <p>For agents and recruiting tools: <a href="/portfolio.json">portfolio.json</a> · <a href="/llms.txt">llms.txt</a></p>
 </div></footer>
 
 <dialog id="skill-dialog" aria-labelledby="sd-title">
